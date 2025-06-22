@@ -1,0 +1,42 @@
+% 2.Methodology.tex
+\section{Methodology}
+\begin{frame}{Random Patches Ensemble}
+  
+  \centering
+  \includegraphics[width=1.025\textwidth]{Images/Methodology/methodology.png} % Replace with the workflow diagram
+  % \caption{Proposed Methodology Workflow}
+\end{frame}
+
+\begin{frame}{Random Patches }
+
+    \centering
+    \includegraphics[width = 1.025\textwidth]{Images/Methodology/ML-model.png}
+    
+\end{frame}
+
+\begin{frame}{Feature Extraction}
+    \begin{tiny}
+    \begin{table}[h!]
+        \centering
+        \caption{Extracted Features with Descriptions and Mathematical Models}
+        \label{tab:features}
+        \begin{tabular}{lp{8em}l}
+        \toprule
+        \textbf{Feature} & \textbf{Description} & \textbf{Mathematical Model} \\
+        \midrule
+        Mean & Average value of the coefficients & $\mu = \frac{1}{n} \sum_{i=1}^{n} x_i$ \\
+        Variance & Measure of dispersion & $\sigma^2 = \frac{1}{n} \sum_{i=1}^{n} (x_i - \mu)^2$ \\
+        Skewness & Asymmetry of the distribution & $\text{Skewness} = \frac{\frac{1}{n} \sum_{i=1}^{n} (x_i - \mu)^3}{\sigma^3}$ \\
+        Kurtosis & Measure of tailedness & $\text{Kurtosis} = \frac{\frac{1}{n} \sum_{i=1}^{n} (x_i - \mu)^4}{\sigma^4}$ \\
+        Shannon's Entropy & Measure of information content & $H = -\sum_{i=1}^{n} p_i \log(p_i)$ \\
+        Energy & Sum of squared coefficients & $E = \sum_{i=1}^{n} x_i^2$ \\
+        Zero Crossing Rate & Rate of signal crossing zero & $\text{ZCR} = \frac{\text{Number of sign changes in } x_i}{n}$ \\
+        Peak-to-Peak (P2P) & Difference between max and min & $\text{P2P} = \max(x_i) - \min(x_i)$ \\
+        Crest Factor & Ratio of peak value to RMS & $\text{Crest Factor} = \frac{\max(|x_i|)}{\sqrt{\frac{1}{n} \sum_{i=1}^{n} x_i^2}}$ \\
+        \bottomrule
+        \end{tabular}
+    \end{table}
+    \end{tiny}
+
+    
+\end{frame}

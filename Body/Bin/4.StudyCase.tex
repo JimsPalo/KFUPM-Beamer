@@ -1,0 +1,32 @@
+% 3.CaseStudy.tex
+\section{Case Study: IEEE 9-Bus System}
+\begin{frame}{System Description: IEEE 9-Bus System}
+  \centering
+  \includegraphics[width=0.9\textwidth]{Images/Model/ieee9_bus_system.drawio.png} % Replace with the IEEE 9-bus diagram
+  % \caption{IEEE 9-Bus System with PMU Placement}
+\end{frame}
+
+\begin{frame}{Synthetic Data Generation}
+\begin{tiny}
+    \begin{table}
+    \centering
+    \begin{tabular}{|l|l|l|}
+    \hline
+    \textbf{Parameter}            & \multicolumn{2}{c|}{\textbf{Training and Testing Dataset}}     \\ \hline
+    \textbf{Power System Model}   & \multicolumn{2}{c|}{IEEE 9-Bus System}                         \\ \hline
+    \textbf{PMU Measurement Window} & \multicolumn{2}{c|}{11 cycles reference, 20 cycles duration}  \\ \hline
+    \textbf{Samples Per Second}   & \multicolumn{2}{c|}{3,840}                                     \\ \hline
+    \textbf{Fault Types}          & \multicolumn{2}{c|}{NoFault, AG, BG, CG, AB, BC, AC, ABG, BCG, ACG, ABC} \\ \hline
+    \textbf{Fault Resistances (Ohms)} & \multicolumn{2}{c|}{0.001, 25, 50, 75, 100}                  \\ \hline
+    \textbf{Line Faults}          & \multicolumn{2}{c|}{L1, L2, L3, L4, L5, L6}                    \\ \hline
+    \textbf{Output Variables}     & \multicolumn{2}{c|}{Voltage Magnitude, Voltage Angle, Current Magnitude, Current Angle} \\ \hline
+    \textbf{Fault Locations (\%)} & Training: 10.0, 18.89, ..., 90.0    & Testing: 15, 25, ..., 85               \\ \hline
+    \textbf{Fault Angles (degrees)} & Training: 0, 45, 90, 135, 180       & Testing: 45, 135, 225, 315             \\ \hline
+    \textbf{Fault Durations (s)}  & Training: 0.05, 0.1, 0.2             & Testing: 0.05                          \\ \hline
+    \textbf{Total Scenarios}      & Training: 49,500                     & Testing: 10,560                        \\ \hline
+    \end{tabular}
+    \label{table:data_generation_parameters}
+    \end{table}
+\end{tiny}
+\end{frame}
+
